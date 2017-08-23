@@ -1,0 +1,35 @@
+#%RAML 1.0
+title: Chat Service
+baseUri: /chat
+version: v1
+
+types:
+  User:
+    properties:
+      name: string
+      email: string
+
+  Message:
+    properties:
+      text: string
+      room: string
+
+  Payload:
+    properties:
+      userType: string
+      user: User
+
+resourceTypes:
+  POST:
+    post:
+      body:
+        application/json:
+          type: <<item>>
+      responses:
+        201:
+          body:
+            application/json:
+              type: object
+
+/messages:
+  type: { POST: {item: Payload}}

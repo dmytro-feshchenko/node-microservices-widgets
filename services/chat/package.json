@@ -1,0 +1,7 @@
+{
+  "name": "chat-service",
+  "version": "0.0.1",
+  "description": "Microservice for Chat widget",
+  "main": "index.js",
+  "license": "MIT"
+}
